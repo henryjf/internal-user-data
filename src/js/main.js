@@ -3,15 +3,15 @@ import $ from 'jquery';
 var url = 'http://api.randomuser.me/?results=12&nat=us';
 
 var user = $('.user');
-var photo = $('.photo');
+// var photo = $('.photo');
 var dataReq = $.getJSON(url);
 
 var userTemplate = function(user) {
   return `
-  <div>
-  <img src=${user.picture.medium}>
+  <div class=user>
+  <img src=${user.picture.large}>
 
-    <h2>${user.name.first}${user.name.last}</h2>
+    <h2>${user.name.first} ${user.name.last}</h2>
     <aside>${user.email}</aside>
     <p>${user.location.street}<br>
       ${user.location.city}<br>

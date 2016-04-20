@@ -9854,11 +9854,11 @@ var _jquery2 = _interopRequireDefault(_jquery);
 var url = 'http://api.randomuser.me/?results=12&nat=us';
 
 var user = (0, _jquery2['default'])('.user');
-var photo = (0, _jquery2['default'])('.photo');
+// var photo = $('.photo');
 var dataReq = _jquery2['default'].getJSON(url);
 
 var userTemplate = function userTemplate(user) {
-  return '\n  <div>\n  <img src=' + user.picture.medium + '>\n\n    <h2>' + user.name.first + user.name.last + '</h2>\n    <aside>' + user.email + '</aside>\n    <p>' + user.location.street + '<br>\n      ' + user.location.city + '<br>\n      ' + user.location.state + '<br>\n\n      <span>' + user.cell + '</span>\n    </p>\n    <div class="ssn">' + user.id.value + '</div>\n  </div>\n  ';
+  return '\n  <div class=user>\n  <img src=' + user.picture.large + '>\n\n    <h2>' + user.name.first + ' ' + user.name.last + '</h2>\n    <aside>' + user.email + '</aside>\n    <p>' + user.location.street + '<br>\n      ' + user.location.city + '<br>\n      ' + user.location.state + '<br>\n\n      <span>' + user.cell + '</span>\n    </p>\n    <div class="ssn">' + user.id.value + '</div>\n  </div>\n  ';
 };
 
 dataReq.then(function (res) {

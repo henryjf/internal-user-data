@@ -1,7 +1,37 @@
 .container {
-  width: 1000px;
-  margin: auto;
+  width: 1100px;
+  margin: 25px;
+  text-align: center;
+
+.user{
+  // border: 1px solid #B8B8B8;
+  text-align: center;
+  width: 20%;
+  float: left;
+  margin:  0 20px 90px 0;
+  img {
+    width: 100%;
+  }
+
+  h2 {
+  border-bottom: 1px solid green;
+  font-size: 18px;
 }
-.info{
-  width: 800px;
+  aside {
+  color: #B8B8B8;
+}
+p {
+  color: gray;
+}
+.ssn {
+  color: transparent;
+  text-shadow: 10px 10px 10px #000;
+
+  :hover {
+    color: green;
+    text-decoration: none;
+  }
+}
+}
+
 }
