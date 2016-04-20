@@ -9870,7 +9870,6 @@ dataReq.then(function (res) {
     // })
 
     info.append(person.email);
-
     info.append(person.picture.medium);
   });
 });
