@@ -9853,26 +9853,37 @@ var _jquery2 = _interopRequireDefault(_jquery);
 
 var url = 'http://api.randomuser.me/?results=12&nat=us';
 
-var info = (0, _jquery2['default'])('.info');
+var user = (0, _jquery2['default'])('.user');
 var photo = (0, _jquery2['default'])('.photo');
 var dataReq = _jquery2['default'].getJSON(url);
 
+var userTemplate = function userTemplate(user) {
+  return '\n  <div>\n  <img src=' + user.picture.medium + '>\n\n    <h2>' + user.name.first + user.name.last + '</h2>\n    <aside>' + user.email + '</aside>\n    <p>' + user.location.street + '<br>\n      ' + user.location.city + '<br>\n      ' + user.location.state + '<br>\n\n      <span>' + user.cell + '</span>\n    </p>\n    <div class="ssn">' + user.id.value + '</div>\n  </div>\n  ';
+};
+
 dataReq.then(function (res) {
-  console.log(res.results);
-  res.results.forEach(function (person) {
-    console.log(person.email);
-
-    console.log(person.picture.medium);
-
-    // res.results.forEach(function (person){
-    //   var photo= person.picture.medium;
-    //   console.log(person.picture.medium);
-    // })
-
-    info.append(person.email);
-    info.append(person.picture.medium);
+  res.results.forEach(function (user) {
+    var html = userTemplate(user);
+    (0, _jquery2['default'])('.container').append(html);
   });
+
+  console.log(res.results);
 });
+// res.results.forEach(function(person){
+//   console.log(person.email);
+//
+//   console.log(person.picture.medium)
+
+// res.results.forEach(function (person){
+//   var photo= person.picture.medium;
+//   console.log(person.picture.medium);
+// })
+
+// user.append(person.email);
+// user.append(person.picture.medium);
+//   });
+//
+// });
 
 },{"jquery":1}]},{},[2])
 
