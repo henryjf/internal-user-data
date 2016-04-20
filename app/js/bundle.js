@@ -9854,6 +9854,7 @@ var _jquery2 = _interopRequireDefault(_jquery);
 var url = 'http://api.randomuser.me/?results=12&nat=us';
 
 var info = (0, _jquery2['default'])('.info');
+var image = (0, _jquery2['default'])('img');
 var dataReq = _jquery2['default'].getJSON(url);
 
 dataReq.then(function (res) {
@@ -9861,7 +9862,16 @@ dataReq.then(function (res) {
   res.results.forEach(function (person) {
     console.log(person.email);
 
+    console.log(person.picture.medium);
+
+    // res.results.forEach(function (person){
+    //   var photo= person.picture.medium;
+    //   console.log(person.picture.medium);
+    // })
+
     info.append(person.email);
+
+    info.append(person.picture.medium);
   });
 });
 
