@@ -9854,7 +9854,7 @@ var _jquery2 = _interopRequireDefault(_jquery);
 var url = 'http://api.randomuser.me/?results=12&nat=us';
 
 var info = (0, _jquery2['default'])('.info');
-var image = (0, _jquery2['default'])('img');
+var photo = (0, _jquery2['default'])('.photo');
 var dataReq = _jquery2['default'].getJSON(url);
 
 dataReq.then(function (res) {

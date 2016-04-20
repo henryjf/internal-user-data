@@ -3,7 +3,7 @@ import $ from 'jquery';
 var url = 'http://api.randomuser.me/?results=12&nat=us';
 
 var info = $('.info');
-var image = $('img');
+var photo = $('.photo');
 var dataReq = $.getJSON(url);
 
 dataReq.then (function (res){
