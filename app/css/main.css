@@ -19,8 +19,8 @@
     .container .user .ssn {
       color: transparent;
       text-shadow: 10px 10px 10px #000; }
-      .container .user .ssn :hover {
+      .container .user .ssn:hover {
         color: green;
-        text-decoration: none; }
+        text-shadow: none; }
 
 /*# sourceMappingURL=main.css.map */

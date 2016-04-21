@@ -27,7 +27,7 @@ p {
   color: transparent;
   text-shadow: 10px 10px 10px #000;
 
-  :hover {
+  &:hover {
     color: green;
     text-shadow: none;
   }
