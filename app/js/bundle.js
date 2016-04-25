@@ -9854,7 +9854,7 @@ var _jquery2 = _interopRequireDefault(_jquery);
 var url = 'http://api.randomuser.me/?results=12&nat=us';
 
 var user = (0, _jquery2['default'])('.user');
-// var photo = $('.photo');
+
 var dataReq = _jquery2['default'].getJSON(url);
 
 var userTemplate = function userTemplate(user) {
@@ -9869,21 +9869,6 @@ dataReq.then(function (res) {
 
   console.log(res.results);
 });
-// res.results.forEach(function(person){
-//   console.log(person.email);
-//
-//   console.log(person.picture.medium)
-
-// res.results.forEach(function (person){
-//   var photo= person.picture.medium;
-//   console.log(person.picture.medium);
-// })
-
-// user.append(person.email);
-// user.append(person.picture.medium);
-//   });
-//
-// });
 
 },{"jquery":1}]},{},[2])
 
